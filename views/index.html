@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Timestamp Microservice</title>
+    <link rel="shortcut icon" href="https://cdn.freecodecamp.org/universal/favicons/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <main class="page">
+      <h1>Timestamp Microservice</h1>
+      <p class="lead">Send a date or a Unix timestamp, get both formats back as JSON.</p>
+
+      <section class="card">
+        <h2>Try it</h2>
+        <form id="tester">
+          <label for="date-input">Date or timestamp</label>
+          <div class="row">
+            <input id="date-input" type="text" placeholder="2015-12-25 or 1451001600000" autocomplete="off" />
+            <button type="submit">Convert</button>
+          </div>
+        </form>
+        <pre id="result" aria-live="polite">Leave the field empty to get the current time.</pre>
+      </section>
+
+      <section class="card">
+        <h2>Example usage</h2>
+        <ul class="examples">
+          <li><a href="/api/2015-12-25">[project_url]/api/2015-12-25</a></li>
+          <li><a href="/api/1451001600000">[project_url]/api/1451001600000</a></li>
+          <li><a href="/api/">[project_url]/api/</a></li>
+        </ul>
+        <h2>Example output</h2>
+        <pre>{"unix": 1451001600000, "utc": "Fri, 25 Dec 2015 00:00:00 GMT"}</pre>
+        <p class="note">An invalid date returns <code>{"error": "Invalid Date"}</code>.</p>
+      </section>
+    </main>
+    <script src="/script.js"></script>
+  </body>
+</html>
